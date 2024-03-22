@@ -1,2 +1,6 @@
 ## Commit 1 Reflection
 > The handle_connection function reads an incoming TCP stream from a client connection, processing an HTTP request. It uses a BufReader to efficiently read lines from the stream, collecting them into a vector representing the HTTP request. It stops reading once an empty line is encountered, which typically indicates the end of the HTTP request headers. Finally, it prints the collected HTTP request lines to the console. This function is part of a simple TCP server that listens for incoming connections on port 7878 and processes HTTP requests from clients.
+
+## Commit 2 Reflection
+> In this updated handle_connection method, after collecting the HTTP request lines, it constructs an HTTP response with a status line, content length, and the contents of a file ("hello.html") read from the file system. It then sends this response back to the client over the TCP stream. This method extends the previous functionality by adding file reading and sending an HTTP response containing the file contents to the client. <br>
+![Commit 2 screen capture](assets/images/commit2.png)
